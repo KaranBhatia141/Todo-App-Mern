@@ -19,7 +19,7 @@ function Profile() {
         e.preventDefault();
          const token = localStorage.getItem('token');
         try{
-            const res = await axios.put('http://localhost:8080/api/user/update-username' ,
+            const res = await axios.put('https://todo-app-mern-stfv.onrender.com/api/user/update-username' ,         //http://localhost:8080
                  {newUsername , password},{
                     headers:{
                         Authorization:`Bearer ${token}`
@@ -44,7 +44,7 @@ function Profile() {
       const token  = localStorage.getItem('token');
 
       try{
-        const res =  await axios.put('http://localhost:8080/api/user/change-password' ,{
+        const res =  await axios.put('https://todo-app-mern-stfv.onrender.com/api/user/change-password' ,{     //http://localhost:8080
             currentPassword , newPassword
         },{
             headers:{
