@@ -12,7 +12,7 @@ export default function Register() {
   const handleSubmit = async (e)=>{
     e.preventDefault();
     try{
-        const res = await axios.post("http://localhost:8080/api/register" , {
+        const res = await axios.post("https://todo-app-mern-stfv.onrender.com/api/register" , {        //http://localhost:8080
             username , email , password
         });
         toast.success('User Registered');
