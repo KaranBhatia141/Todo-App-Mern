@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGO_DB)                               //("mongodb
 
 
 const app = express();
-app.use(cors());  // use to connect frontend to backend   
+app.use(cors({origin:['https://todo-app-mern-git-main-karanbhatia141s-projects.vercel.app/'],credentials:true}));  // use to connect frontend to backend   
 app.use(express.json());   //hhtp req into json 
 
 // api calls 
