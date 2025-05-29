@@ -15,7 +15,7 @@ export default function Home() {
       if (!token){
         return toast.error('User not authenticated');
       }
-      const res = await axios.post('http://localhost:8080/api/todos', {text},{  // sending res to server post req
+      const res = await axios.post('https://todo-app-mern-stfv.onrender.com/api/todos', {text},{  // sending res to server post req    //http://localhost:8080
         headers: {
           Authorization: `Bearer ${token}`  // check authorization of user 
         }   
@@ -35,7 +35,7 @@ export default function Home() {
       return console.error('No token found');
      }
     try {
-      const res = await axios.get('http://localhost:8080/api/todos',{  // send req to server
+      const res = await axios.get('https://todo-app-mern-stfv.onrender.com/api/todos',{  // send req to server      //http://localhost:8080
         headers:{
           Authorization:`Bearer ${token}`  // check authorized user or not
         }
@@ -55,7 +55,7 @@ export default function Home() {
            if (!token){ //check token recevid or not 
           return toast.error("Not authenticated");  // alert 
            }  
-        await axios.delete(`http://localhost:8080/api/todos/${id}`,{ // delete request 
+        await axios.delete(`https://todo-app-mern-stfv.onrender.com/api/todos/${id}`,{ // delete request   //http://localhost:8080
            headers: {
            Authorization: `Bearer ${token}`
       }
