@@ -13,7 +13,7 @@ export default function Login() {
     const handleSubmit = async (e)=>{
       e.preventDefault();   //prevenydefault funtion 
       try{
-        const res = await axios.post("http://localhost:8080/api/login" , { //req to server 
+        const res = await axios.post("https://todo-app-mern-stfv.onrender.com/api/login" , { //req to server //http://localhost:8080
             email , password 
         });
          if (!res.data.token || !res.data.user) {
